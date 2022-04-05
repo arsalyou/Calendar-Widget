@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:gravity="center_vertical"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="Select Date"
+            android:textColor="#000000"
+            android:textSize="20dp"
+
+            android:textStyle="bold"></TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+
+            android:orientation="horizontal">
+
+            <!--        <Spinner-->
+            <!--            android:id="@+id/yearSpinner"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:background="@null"-->
+            <!--            android:layout_height="wrap_content"></Spinner>-->
+
+            <com.wisnu.date_range_picker_android.MaterialSpinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:ms_dropdown_max_height="150dp"
+                app:ms_text_color="#000000" />
+            <Spinner
+                android:id="@+id/yearSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:dropDownHeight="300dp"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/yearSpinner"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_down" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+<!--<include layout="@layout/main"></include>-->
+<!--    <com.skydoves.powerspinner.PowerSpinnerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#FFFFFF"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="Question 1"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textColorHint="#000000"-->
+<!--        android:textSize="14.5sp"-->
+<!--        app:spinner_arrow_gravity="end"-->
+<!--        app:spinner_arrow_padding="8dp"-->
+<!--        app:spinner_divider_show="true"-->
+<!--        app:spinner_divider_size="0.4dp"-->
+
+<!--        app:spinner_popup_animation="dropdown"-->
+<!--        app:spinner_popup_background="#FFFFFF"-->
+<!--        app:spinner_popup_elevation="14dp" />-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="#CCCCCC"/>
+    <com.wisnu.datetimerangepickerandroid.CalendarRowView
+        android:id="@+id/day_names_header_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/calendar_bg"
+        >
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sun"
+            android:paddingLeft="20dp"
+            />
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            style="@style/CalendarCell.DayHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            />
+    </com.wisnu.datetimerangepickerandroid.CalendarRowView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="#CCCCCC"/>
+    <com.wisnu.datetimerangepickerandroid.CalendarPickerView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:scrollbarStyle="outsideOverlay" />
+
+</LinearLayout>

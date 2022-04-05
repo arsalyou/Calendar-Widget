@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/state_range_middle" app:state_range_middle="true" />
+    <item android:drawable="@drawable/state_selected" android:state_selected="true" app:state_range_first="false" app:state_range_last="false" app:state_right_edge="false" app:state_left_edge="false" />
+    <item android:drawable="@drawable/state_range_first" app:state_range_first="true" />
+    <item android:drawable="@drawable/state_range_last" app:state_range_last="true" />
+    <item android:drawable="@drawable/state_bg_unselected" app:state_bg_unselected="true" />
+    <item android:drawable="@drawable/state_left_edge" app:state_left_edge="true" />
+    <item android:drawable="@drawable/state_right_edge" app:state_right_edge="true" />
+    <item app:state_current_month="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:drawable="@android:color/transparent" app:state_today="true" />
+</selector>
