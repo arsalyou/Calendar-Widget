@@ -9,7 +9,7 @@ Date Time Range Picker for Android by [android-times-square](https://github.com/
 
 Standalone Android widget for picking a single date from a calendar view.
 
-<img src="https://github.com/wisnukurniawan/date-time-range-picker-android/blob/master/screenshot.png" width="300" height="533" />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic1.png" width="300" height="533" />
 
 ## Installation
 ### Via Gradle
