@@ -58,12 +58,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner yearSpinner;
     private DateFormat weekdayNameFormat;
     private SharedViewModel viewModel;
-    boolean click = true;
-    EditText text;
-    EditText text2;
-
-
-
 
 
 
@@ -74,13 +68,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
 
-//        final LayoutInflater inflater = (LayoutInflater) this
-//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        final Button b = (Button) findViewById(R.id.btn);
-//        final View pview = inflater.inflate(R.layout.popup,
-//                (ViewGroup) findViewById(R.layout.main));
-//        final PopupWindow pw = new PopupWindow(pview);
-
         getSupportActionBar().hide();
         final CalendarPickerView cal = findViewById(R.id.calendar_view);
         cal.init(
@@ -90,16 +77,6 @@ public class MainActivity extends AppCompatActivity {
         ).inMode(CalendarPickerView.SelectionMode.RANGE)
                 .withSelectedDates(getSelectedDates());
 
-
-
-
-
-                //cal.setOnDateSelectedListener()
-//        cal.init(
-//                DateTime.now(DateTimeZone.UTC).toDate(),
-//                buildMaximumDate(),
-//                this
-//        )
 
 
         cal.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
@@ -127,14 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("onMinDateResolved", date.toString());
             }
         });
-
-
-
-
-//        final Button button1 = findViewById(R.id.button1);
-//        final Button button2 = findViewById(R.id.btn);
+        // TODO Add configurations for year
         final String[] years = { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027"};
-
 
 
         final MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
@@ -153,79 +124,9 @@ public class MainActivity extends AppCompatActivity {
         timeZone = TimeZone.getDefault();
         locale = Locale.getDefault();
         today = Calendar.getInstance(timeZone, locale);
-//        yearSpinner = findViewById(R.id.yearSpinner);
-//        ArrayAdapter ad = new ArrayAdapter(this, R.layout.year_filter_item, years);
-//        yearSpinner.setAdapter(ad);
-
-//        b.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                if (click) {
-//                    // if onclick written here, it gives null pointer exception.
-//                    // if onclick is written here it gives runtime exception.
-//                    pw.showAtLocation(v, Gravity.CENTER_HORIZONTAL, 0, 0);
-//                    pw.update(8, 0, 250, 200);
-//                    String[] array = new String[] { "tushar", "pandey",
-//                            "almora" };
-//
-//                    ListView lst = (ListView) pview.findViewById(R.id.listview);
-//                    MyAdapter adapter = new MyAdapter(getApplicationContext());
-//                    lst.setAdapter(adapter);
-//                    lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                        @Override
-//                        public void onItemClick(AdapterView<?> arg0, View arg1,
-//                                                int arg2, long arg3) {
-//                            Toast.makeText(MainActivity.this, "pandey",
-//                                    Toast.LENGTH_SHORT).show();
-//                        }
-//
-//                    });
-//                    click = false ;
-//                }
-//                else
-//                {
-//                    pw.dismiss();
-//                    click = true;
-//                }
-//
-//            }
-//        });
-
-        viewModel.getDropDownyear().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                //if state false
-//        if(null != viewModel.getState().getValue() &&  !viewModel.getState().getValue() && (viewModel.getFirstVisiblePosition().getValue()% 12) == 0){
-                if(null != viewModel.getState().getValue() &&  !viewModel.getState().getValue()){
-//          Month month = calendarConstraints.getStart().monthsLater(viewModel.getFirstVisiblePosition().getValue());
-//          String monthYear = month.getLongName();
-//          String[] headerDetail = monthYear.split(" ");
-//        viewHolder.monthTitle.setText(headerDetail[0]);
-//        viewHolder.yearTitle.setText(headerDetail[1]);
-
-//          int updatedIndex = getIndex(yearSpinner, headerDetail[1]);
-//          yearSpinner.setSelection(updatedIndex);
-//                    viewModel.setDropDownState(true);
-//                    int updatedIndex = getIndex(yearSpinner, s);
-//                    yearSpinner.setSelection(updatedIndex);
-                }
-
-            }
-        });
-
-//        cal.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-//            @Override
-//            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//                v.getfi
-//            }
-//        });
-
-
-
-
 
         cal.setOnScrollListener(new AbsListView.OnScrollListener() {
             private int mLastFirstVisibleItem;
-
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
 //                Log.i("SCROLLING DOWN","TRUE");
@@ -270,76 +171,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-//      cal.setOnScrollListener(new OnScrollListener(){
-//          public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-//              // TODO Auto-generated method stub
-//          }
-//          public void onScrollStateChanged(AbsListView view, int scrollState) {
-//              // TODO Auto-generated method stub
-//              final ListView lw = getListView();
-//
-//              if(scrollState == 0)
-//                  Log.i("a", "scrolling stopped...");
-//
-//
-//              if (view.getId() == lw.getId()) {
-//                  final int currentFirstVisibleItem = lw.getFirstVisiblePosition();
-//                  if (currentFirstVisibleItem > mLastFirstVisibleItem) {
-//                      mIsScrollingUp = false;
-//                      Log.i("a", "scrolling down...");
-//                  } else if (currentFirstVisibleItem < mLastFirstVisibleItem) {
-//                      mIsScrollingUp = true;
-//                      Log.i("a", "scrolling up...");
-//                  }
-//
-//                  mLastFirstVisibleItem = currentFirstVisibleItem;
-//              }
-//          }
-//      });
-
-
-
-//        yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-//                //cal.scrollToYear(2020);
-//                Object item = parent.getItemAtPosition(pos);
-////                ((TextView) parent.getChildAt(pos)).setTextColor(Color.BLACK);
-////                ((TextView) parent.getChildAt(pos)).setTextSize(5);
-//                //cal.scrollToYear(Integer.parseInt(item.toString()));
-//
-////                if (null != viewModel.getState().getValue() && viewModel.getState().getValue()) {
-////                    if (pos > spinnerId) {
-////                        Object item = parent.getItemAtPosition(pos);
-////                        Month current = Month.create(Integer.parseInt(item.toString()), Calendar.FEBRUARY);
-////                        CalendarConstraints calendarConstraints = calendar.getCalendarConstraints();
-////                        Month moveTo = calendarConstraints.clamp(current);
-////                        calendar.setCurrentMonth(moveTo);
-////                    } else if (pos < spinnerId) {
-////                        Object item = parent.getItemAtPosition(pos);
-////                        Month current = Month.create(Integer.parseInt(item.toString()), Calendar.JANUARY);
-////                        CalendarConstraints calendarConstraints = calendar.getCalendarConstraints();
-////                        Month moveTo = calendarConstraints.clamp(current);
-////                        calendar.setCurrentMonth(moveTo);
-////                    }
-////                    spinnerId = pos;
-////                }
-//                //observedYear = Boolean.FALSE;
-//
-//
-//                //calendar.setSelector(MaterialCalendar.CalendarSelector.DAY);
-//
-//
-//                //setCurrentMonth(current);
-//
-//            }
-//            public void onNothingSelected(AdapterView<?> parent) {
-//            }
-//        });
-
         cal.getSelectedDates();
-
         final int originalDayOfWeek = today.get(Calendar.DAY_OF_WEEK);
         final CalendarRowView headerRow = findViewById(R.id.day_names_header_row);
         int firstDayOfWeek = today.getFirstDayOfWeek();
@@ -352,36 +184,6 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextColor(Color.BLACK);
             textView.setTypeface(null, Typeface.BOLD);
         }
-
-        //button1.setText(selectedDate.toString());
-//        button1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Date temp = new Date(2019, 2, 2);
-//                cal.scrollToYear(2020);
-//
-////                cal.init(
-////                        DateTime.now(DateTimeZone.UTC).toDate(),
-////                        DateTime.now(DateTimeZone.UTC).plusDays(10).toDate()
-////                )
-////                        .inMode(CalendarPickerView.SelectionMode.RANGE)
-////                        .withSelectedDate(selectedDate);
-//
-////                cal.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
-////                    @Override
-////                    public void onDateSelected(Date date) {
-////                        Log.d("onDateSelected", date.toString());
-////                        selectedDate = date;
-////                        button1.setText(selectedDate.toString());
-////                    }
-////
-////                    @Override
-////                    public void onDateUnselected(Date date) {
-////
-////                    }
-////                });
-//            }
-//        });
 
         cal.setOnDateResolvedListener(new CalendarPickerView.OnDateResolvedListener() {
             @Override

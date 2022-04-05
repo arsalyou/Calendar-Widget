@@ -2,10 +2,11 @@ Date Time Range Picker for Android by [android-times-square](https://github.com/
 ==========================
 
 ## Improvement
-- Support nested scrolling
-- Support vector drawable
-- Small screen enhancement
-- Remove out of date range exception move to nearest date instead
+- Added dropdown for year selection and synced with calendar to update its view
+- Updated range selection view along with some other screen enhancements
+- Added EditTextFields to display the start and end date and made it editable to sync with calendar and dropdown view
+- Fixed previous UI issues
+- Code for EditTextFields is currently not public as I used custom EditTextFields. Inbox me if anyone wants to access the code.
 
 Standalone Android widget for picking a single date from a calendar view.
 
@@ -34,7 +35,7 @@ Add the dependency:
 
 ```
 dependencies {
-	implementation "com.github.wisnukurniawan:date-time-range-picker-android:${version}"
+	implementation "com.github.arsalyou:date-time-range-picker-android:${version}"
 }
 
 ```
@@ -45,7 +46,7 @@ dependencies {
 Include `CalendarPickerView` in your layout XML.
 
 ```xml
-<com.wisnu.datetimerangepickerandroid.CalendarPickerView
+<com.arsalyou.datetimerangepickerandroid.CalendarPickerView
     android:id="@+id/calendar_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
