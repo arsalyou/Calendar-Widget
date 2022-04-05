@@ -10,12 +10,12 @@ Date Time Range Picker for Android by [android-times-square](https://github.com/
 Standalone Android widget for picking a single date from a calendar view.
 
 <img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic1.png" />
-<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic2.png" width="150" height="533" />
-<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic3.png" width="150" height="533" />
-<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic4.png" width="150" height="533" />
-<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic5.png" width="150" height="533" />
-<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic6.png" width="150" height="533" />
-<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic7.png" width="150" height="533" />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic2.png"  />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic3.png" />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic4.png" />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic5.png"  />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic6.png"  />
+<img src="https://raw.githubusercontent.com/arsalyou/Calendar-Widget/main/pic7.png"  />
 
 
 ## Installation
